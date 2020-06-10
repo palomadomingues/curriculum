@@ -1,0 +1,399 @@
+@media print {
+    @page 
+    {
+        size: auto;   /* auto is the current printer page size */
+        margin: 0.25cm 0.2cm;  /* this affects the margin in the printer settings */
+        padding: 2cm
+    }
+    @page:footer {display:block;height:2cm; color: #fff }
+    @page:header {display:block;height:2cm; color: #fff}
+
+    * {
+        -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+        color-adjust: exact !important;                 /*Firefox*/
+    }
+    .print-only{
+        display:block;
+    }
+    body 
+    {
+        margin: 0px;  /* the margin on the content before printing */
+    }
+    #portfolio, #action-btns, nav, #hero .profile-pic div.titles span{
+        display: none;
+    }
+    .animation-chain{
+        visibility: visible!important;
+
+    }
+    *, :before, :after {
+        color: inherit !important;
+        text-shadow: inherit !important;
+        background: inherit !important;
+        -webkit-box-shadow: inherit !important;
+        box-shadow: inherit !important;
+    }
+    .hero-triangles , .triangles{
+        display: none;
+    }
+
+    .sticky {
+        position: relative!important;
+        top: 0!important;
+    }
+    .source{
+        display: none!important;
+    }
+    section.section-profile{
+        text-align: right;
+        width: 95%;
+        position: relative;
+        margin-bottom: 60px;
+        float: right;
+        flex-direction: row-reverse;
+        height: 47vh;
+        padding: 0;
+        margin: 0;
+        margin-top: -6%;
+        pointer-events: none;
+        top: 0px;
+        color: #073438;
+        z-index: 999999;
+    }
+    section.section-profile img.profile-pic{
+        margin-top: 120px!important;
+        filter: brightness(1.5) grayscale(1);
+    }
+    #profile h1, #profile .titles{
+        display: none;
+    }
+    section{
+        border:none
+    }
+    section h2{
+        font-size: 1.7em!important;
+        margin-top: -30px!important;
+    }
+    section.section-about-me{
+        text-align: left;
+        position: absolute!important;;
+        top: 4%!important;
+        left: 5%!important;
+        right: 5%!important;
+        width: 90%;
+        padding-top: 0;
+        margin-bottom: 0;
+        align-self: flex-end;
+        page-break-after: always!important;
+        page-break-inside: avoid!important;
+    }
+    section.section-about-me .details .intro p{
+        font-family: auto;
+        width: 90%;
+    }
+    section.section-about-me svg.triangle{
+        display: none;
+    }
+    nav.opened, section.section-experience-education,section.section-skills-knowledge,section.section-portfolio,section.section-testimonials,section.section-contact{
+        width: 100%;
+        page-break-inside: avoid!important;
+    }
+    .sticky-margin-30vh{
+        height: 0;
+    }
+    section.section-profile div.titles>span{
+        display: none;
+    }
+    section.section-profile div.titles ul.texts{
+        display: block!important;
+    }
+    section.section-profile div.titles ul>li{
+        visibility: visible!important;
+    }
+    section ul.timeline:before{
+        color:black;
+        background-color: black;
+    }
+    /* CONTACT */
+    #contact{
+        display: none;
+    }
+    /* SKILL AND KNOWLEDGE */
+    section.section-experience-education{        
+        page-break-after: always!important;
+        float: left;
+    }
+    section.section-skills-knowledge{
+        margin-top: 240px!important;
+        display: block!important;
+        float: left;
+        page-break-before: always!important;
+        page-break-inside: avoid!important;
+        display: block!important;
+        width: 100%!important;
+        background-color: #FFF!important;
+    }
+    section.section-skills-knowledge *{
+        page-break-inside: avoid!important;
+    }
+    section.section-skills-knowledge h2{
+        page-break-before: always!important;
+    
+    }
+    #skills-knowledge ul{
+        page-break-inside: avoid!important;
+    }
+    #skills-knowledge .skill-item{
+        width: 50%;
+    }
+    #skills-knowledge .skill-item .col-sm-5{
+        width: 35%;
+    }
+    #skills-knowledge .skill-item .col-sm-7{
+        width: 65%;
+    }
+    #skills-knowledge hr{
+        display: none!important;
+    }
+    /* TESTIMONIALS */
+    
+    #testimonials{
+        width: 100%!important;
+        padding-top: 0;
+        margin-top: -10px;
+    }
+    #testimonials{
+        margin-bottom: 0;
+        page-break-inside: avoid!important;
+        page-break-before: always!important;
+    }
+    #testimonials *{
+        page-break-inside: avoid!important;
+    }
+    .testimonial .quote{
+        margin-left: 3%!important;
+        padding-left: 5%!important;
+    }
+    /* CAROUSEL */
+    .owl-carousel, .owl-stage-outer {
+        page-break-inside: avoid!important;
+        width: 100%!important;
+    }
+    .owl-carousel .owl-stage-outer{
+        overflow: visible;
+        page-break-inside: avoid!important;
+    }
+    .owl-carousel .owl-stage{
+        display: flex!important;
+        flex-direction: column!important;
+        width: 120%!important;
+        transform: none!important;
+        margin-bottom: 30px;
+    }
+    .owl-carousel .owl-stage .owl-item {        
+        page-break-inside: avoid!important;
+           
+        width: 100%!important;
+        display: block!important;
+        float:left!important; 
+    }
+    .owl-carousel .owl-stage .owl-item.cloned{
+        display: none!important;
+    }
+    .owl-dots{
+        display: none!important;
+    }
+    section.section-testimonials .testimonial{
+        width: 80%!important;
+    }
+    section.section-testimonials .testimonial .person{
+        padding:0!important;
+        padding-bottom:60px!important;
+        justify-content: start!important;
+    }
+
+    /* TIMELINE */
+    #about-me{
+        page-break-after: always!important;
+    }
+    #experience-education{ 
+        margin-top: 80px;
+        margin-bottom: 30px ;
+        position: relative!important;
+        page-break-before: always!important;
+    }
+    #experience-education h3,#experience-education h2, #experience-education h4{
+        page-break-inside: avoid!important;
+        page-break-after: avoid!important;
+    }
+    section ul.timeline>li.timeline-item .icon>div{
+        -webkit-transform: translateX(0%);
+        -o-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        transform: translateX(0%);
+        page-break-inside: avoid!important;
+    }
+    section ul.timeline>li{
+    }
+    section ul.timeline>li .icon{
+        opacity: 1;
+    }
+    section ul.timeline>li.timeline-item{
+        page-break-inside: avoid!important;
+    }
+    section ul.timeline>li.timeline-item *{
+        page-break-inside: avoid!important;
+    }
+    section ul.timeline>li.timeline-item div.timeline-content{
+        display: block!important;
+    }
+    section ul.timeline>li.timeline-item div.timeline-content>div{
+        opacity: 1!important;
+        -webkit-transform: scale(1) translateX(0%)!important;
+        -o-transform: scale(1) translateX(0%)!important;
+        -ms-transform: scale(1) translateX(0%)!important;
+        transform: scale(1) translateX(0%)!important;
+    }    
+    section ul.timeline:before {
+        content: ''!important;
+        display: block!important;
+        position: absolute!important;
+        top: 0!important;
+        bottom: -20px!important;
+        left: 50%!important;
+        width: 2px!important;
+        background-color: #000!important;
+        -webkit-transform: translateX(-50%)!important;
+        -o-transform: translateX(-50%)!important;
+        -ms-transform: translateX(-50%)!important;
+        transform: translateX(-50%)!important;
+    }
+    section ul.timeline>li .icon,
+    section ul.timeline>li:after,
+    section ul.timeline>li:before {
+        position: absolute!important;
+        -webkit-transform: translateY(-50%)!important;
+        -o-transform: translateY(-50%)!important;
+        -ms-transform: translateY(-50%)!important;
+        transform: translateY(-50%)!important;
+        content: ''!important;
+        display: block!important;
+        background-color: #fff!important;
+    }
+    section ul.timeline>li .icon{
+        background-color: transparent!important;
+    }
+    section ul.timeline>li .icon:before {
+        position: absolute!important;
+        content: ''!important;
+        display: block!important;
+        height: 2px!important;
+        width: 55px!important;
+        top: calc(50% -1px)!important;
+        background-color: #000!important;
+    }
+    section ul.timeline>li .icon:after {
+        position: absolute!important;
+        content: ''!important;
+        display: block!important;
+        width: 20px!important;
+        height: 20px!important;
+        border-radius: 20px!important;
+        box-shadow: 0 0 0 3px #000!important;
+        top: 50%!important;
+        background-color: #fff!important;
+    }
+    section ul.timeline>li:before {
+        width: 40px!important;
+        height: 40px!important;
+        border-radius: 40px!important;
+        box-shadow: 0 0 0 2px #000!important;
+    }
+    section ul.timeline>li:nth-child(even):before {
+        right: -20px!important;
+    }
+    section ul.timeline>li:nth-child(odd):before {
+        left: -20px!important;
+    }section ul.timeline>li:nth-child(odd) .icon {
+        text-align: right!important;
+        left: 0!important;
+        -webkit-transform: translateY(-50%) translateX(-100%) translateX(-61px)!important;
+        -o-transform: translateY(-50%) translateX(-100%) translateX(-61px)!important;
+        -ms-transform: translateY(-50%) translateX(-100%) translateX(-61px)!important;
+        transform: translateY(-50%) translateX(-100%) translateX(-61px)!important;
+    }
+    section ul.timeline>li:nth-child(odd) .icon:after {
+        margin-left: 0!important;
+        -webkit-transform: translateY(-50%) translateX(-50%) translateX(61px)!important;
+        -o-transform: translateY(-50%) translateX(-50%) translateX(61px)!important;
+        -ms-transform: translateY(-50%) translateX(-50%) translateX(61px)!important;
+        transform: translateY(-50%) translateX(-50%) translateX(61px)!important;
+    }
+    section ul.timeline>li:nth-child(even) .icon {
+        text-align: left!important;
+        right: 0!important;
+        -webkit-transform: translateY(-50%) translateX(100%) translateX(61px)!important;
+        -o-transform: translateY(-50%) translateX(100%) translateX(61px)!important;
+        -ms-transform: translateY(-50%) translateX(100%) translateX(61px)!important;
+        transform: translateY(-50%) translateX(100%) translateX(61px)!important;
+    }
+    section ul.timeline>li:nth-child(even) .icon:after {
+        margin-right: 0!important;
+        -webkit-transform: translateY(-50%) translateX(50%) translateX(-61px)!important;
+        -o-transform: translateY(-50%) translateX(50%) translateX(-61px)!important;
+        -ms-transform: translateY(-50%) translateX(50%) translateX(-61px)!important;
+        transform: translateY(-50%) translateX(50%) translateX(-61px)!important;
+    }section ul.timeline>li:nth-child(odd) .icon:after, section ul.timeline>li:nth-child(odd) .icon:before {
+        left: 100%!important;
+    }
+    section ul.timeline>li:nth-child(even) .icon:after, section ul.timeline>li:nth-child(even) .icon:before {
+        right: 100%!important;
+    }
+    section ul.timeline>li .icon>img{
+        
+        filter: invert(1)!important;
+    }
+    section.section-experience-education {
+        overflow: visible;
+        padding-top: 20%;
+    }
+    section.section-experience-education svg.triangle {        
+        position: absolute!important;
+        top: -38%!important;
+        right: 0!important;
+        left: 0%!important;
+        width: 100%!important;
+        height: auto!important;
+        z-index: 99999!important;
+        pointer-events: none!important;
+    }
+
+
+
+
+
+    /* TRIANGLES */
+    .nav-triangle{
+        position: absolute!important;
+        text-align: right!important;
+        top: 0!important;
+        margin-left: 65%!important;
+        width: 35%!important;
+        height: auto!important;
+        z-index: 1!important;
+    }
+    section.section-experience-education svg.triangle{
+        text-align: right!important;
+        position: fixed!important;
+        top: 0!important;
+        margin-left: 80%!important;
+        width: 20%!important;
+        height: auto!important;
+        z-index: 1!important;
+    }
+    section.section-experience-education svg.triangle>path{
+        fill: #56ced6;
+        width: 100%!important;
+        opacity: 1!important;
+    }
+}
